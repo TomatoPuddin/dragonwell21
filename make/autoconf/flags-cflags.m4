@@ -1,5 +1,5 @@
 #
-# Copyright (c) 2011, 2023, Oracle and/or its affiliates. All rights reserved.
+# Copyright (c) 2011, 2023, 2024, Oracle and/or its affiliates. All rights reserved.
 # DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS FILE HEADER.
 #
 # This code is free software; you can redistribute it and/or modify it
@@ -315,14 +315,14 @@ AC_DEFUN([FLAGS_SETUP_OPTIMIZATION],
     C_O_FLAG_DEBUG_JVM=""
     C_O_FLAG_NONE="-qnoopt"
   elif test "x$TOOLCHAIN_TYPE" = xmicrosoft; then
-    C_O_FLAG_HIGHEST_JVM="-O2 -Oy-"
-    C_O_FLAG_HIGHEST="-O2"
-    C_O_FLAG_HI="-O1"
-    C_O_FLAG_NORM="-O1"
-    C_O_FLAG_DEBUG="-Od"
+    C_O_FLAG_HIGHEST_JVM="/O2 /Oy- /GL /Ob3 /Gw"
+    C_O_FLAG_HIGHEST="/O2 /GL /Ob3 /Gw"
+    C_O_FLAG_HI="/O2 /GL /Ob3 /Gw"
+    C_O_FLAG_NORM="/O1"
+    C_O_FLAG_DEBUG="/Od"
     C_O_FLAG_DEBUG_JVM=""
-    C_O_FLAG_NONE="-Od"
-    C_O_FLAG_SIZE="-Os"
+    C_O_FLAG_NONE="/Od"
+    C_O_FLAG_SIZE="/Os"
   fi
 
   # Now copy to C++ flags
