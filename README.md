@@ -1,7 +1,7 @@
 Build for minecraft client 1.19 and above
 - Automatically select the dedicated GPU on laptops that have both integrated and dedicated GPUs.
 - JFX21 integrated (without media and webkit).
-- Build with Visual Studio 2022.
+- Build with clang-19.2.0 + thin lto.
 - More optimization flags.
 - Trimmed jmods not used by minecraft or hmcl.
 
